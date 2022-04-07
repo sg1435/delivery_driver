@@ -10,6 +10,6 @@ desired_hourly_earning = int(desired_hourly_earning)
 mil = st.slider('DELIVERY MILE',0.0,50.0,0.5)
 
 price_max = mil/mpg*oil_price + mil/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
-price_min = mil/mpg*oil_price + mil/mph*desired_hourly_earning*2 + pick_and_drop_time/60*desired_hourly_earning
+price_min = mil*2/mpg*oil_price + mil*2/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
 st.button('CALCULATE THE OFFER PRICES')
-st.text('minimum price is ' + str(price_min))
+st.text('minimum price is ' + str(round(price_min,2)))
