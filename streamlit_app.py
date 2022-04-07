@@ -14,4 +14,4 @@ price_max = mil*2/mpg*oil_price + mil*2/mph*desired_hourly_earning + pick_and_dr
 st.button('CALCULATE THE OFFER PRICES')
 
 
-st.text('price range is between ' + str(round(price_min,2)) + ' - ' + str(round(price_max,2))
+st.text('price range is between ' + str(round(price_min,2)) + ' - ' + str(round(price_max,2)))
