@@ -10,6 +10,7 @@ desired_hourly_earning = int(desired_hourly_earning)
 
 mil = st.slider('DELIVERY MILE',0,100, 0.5)
 
-price = mil/mpg*oil_price + mil/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
+price_max = mil/mpg*oil_price + mil/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
+price_min = mil/mpg*oil_price + mil/mph*desired_hourly_earning*2 + pick_and_drop_time/60*desired_hourly_earning
 
 st.text(price)
