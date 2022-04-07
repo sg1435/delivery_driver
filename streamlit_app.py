@@ -7,7 +7,7 @@ pick_and_drop_time = st.slider('PICK AND DROP TIME (min.)', 1, 60)
 desired_hourly_earning = st.text_input('DESIRED HOURLY EARNING', value="")
 desired_hourly_earning = int(desired_hourly_earning)
 
-mil = st.slider('DELIVERY MILE',0,50)
+mil = st.slider('DELIVERY MILE',0.0,50.0,1)
 
 price_min = mil/mpg*oil_price + mil/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
 price_max = mil*2/mpg*oil_price + mil*2/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
