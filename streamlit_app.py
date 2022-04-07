@@ -1,6 +1,6 @@
 import streamlit as st
 
-oil_price = st.slider('GAS PRICE', 1, 10, 0.1)
+oil_price = st.slider('GAS PRICE', 1.0, 10.0, 0.1)
 mpg = st.slider('MPG', 1, 100)
 mph = st.slider('ESTIMATED MPH', 10, 100)
 pick_and_drop_time = st.slider('PICK AND DROP TIME (min.)', 1, 60)
