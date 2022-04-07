@@ -3,12 +3,12 @@ import streamlit as st
 
 
 
-oil_price = float(st.text_input('GAS PRICE', value = '4.17'))
+oil_price = int(st.text_input('GAS PRICE', value = '4.17'))
 mpg = int(st.text_input('MPG', value = '25'))
 mph = int(st.text_input('ESTIMATED MPH', value = '30'))
 pick_and_drop_time = int(st.text_input('PICK AND DROP TIME (min.)', '10'))
 desired_hourly_earning = int(st.text_input('DESIRED HOURLY EARNING', value="20"))
-mil = st.slider('DELIVERY MILE',0.0,50.0,1.0)
+mil = int(st.slider('DELIVERY MILE',0.0,50.0,1.0))
 
 price_min = mil/mpg*oil_price + mil/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
 price_max = mil*2/mpg*oil_price + mil*2/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
