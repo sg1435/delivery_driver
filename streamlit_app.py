@@ -3,8 +3,8 @@ import streamlit as st
 
 
 
-oil_price = float(st.text_input('GAS PRICE', value = '4.17'))
-oil_price = int(oil_price)
+oil_price = float(st.text_input('GAS PRICE', value = '4.5'))
+
 mpg = int(st.text_input('MPG', value = '25'))
 mph = int(st.text_input('ESTIMATED MPH', value = '30'))
 pick_and_drop_time = int(st.text_input('PICK AND DROP TIME (min.)', '10'))
