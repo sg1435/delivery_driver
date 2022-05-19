@@ -1,8 +1,13 @@
 import streamlit as st
 
-
-st.text('When you enter the required information below, a price range appears as a result. The maximum value in this price range is calculated by assuming that you come back to your current location after receiving and delivering the order, and the minimum value is that you receive a new order at the location where you delivered the order and contunie delivering.')
-
+st.header('DELIVERY OFFER CALCULATION FOR DRIVERS')
+'''
+When you enter the required information below, a price range appears as a result. 
+The maximum value in this price range is calculated by assuming that 
+you come back to your current location after receiving and delivering the order, 
+and the minimum value is that you receive a new order at the location 
+where you delivered the order and contunie delivering.
+'''
 
 oil_price = float(st.text_input('GAS PRICE', value = '4.5'))
 
