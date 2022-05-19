@@ -1,13 +1,16 @@
 import streamlit as st
 
 st.header('DELIVERY OFFER CALCULATION FOR DRIVERS')
-'''
-When you enter the required information below, a price range appears as a result. 
-The maximum value in this price range is calculated by assuming that 
-you come back to your current location after receiving and delivering the order, 
-and the minimum value is that you receive a new order at the location 
-where you delivered the order and contunie delivering.
-'''
+
+with st.expander("See explanation"):
+     st.write("""
+         When you enter the required information below, a price range appears as a result. 
+         The maximum value in this price range is calculated by assuming that 
+         you come back to your current location after receiving and delivering the order, 
+         and the minimum value is that you receive a new order at the location 
+         where you delivered the order and contunie delivering.
+     """)
+
 
 oil_price = float(st.text_input('GAS PRICE', value = '4.5'))
 mpg = int(st.text_input('MPG', value = '25'))
@@ -20,4 +23,3 @@ price_min = mil/mpg*oil_price + mil/mph*desired_hourly_earning + pick_and_drop_t
 price_max = mil*2/mpg*oil_price + mil*2/mph*desired_hourly_earning + pick_and_drop_time/60*desired_hourly_earning
 
 st.metric(label="OFFER RANGE", value= '$' + str(round(price_min,2)) + ' - $' + str(round(price_max,2)))
-#st.text('price range is between ' + str(round(price_min,2)) + ' - ' + str(round(price_max,2)))
