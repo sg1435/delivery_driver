@@ -9,8 +9,6 @@ and the minimum value is that you receive a new order at the location
 where you delivered the order and contunie delivering.
 '''
 
-
-oil_price, mpg, mph = st.columns(3)
 oil_price = float(st.text_input('GAS PRICE', value = '4.5'))
 mpg = int(st.text_input('MPG', value = '25'))
 mph = int(st.text_input('ESTIMATED MPH', value = '30'))
